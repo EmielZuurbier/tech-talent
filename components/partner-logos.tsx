@@ -24,7 +24,7 @@ const partners = [
 
 export function PartnerLogos() {
   return (
-    <footer className="mt-4 shrink-0 border-t border-white/10 pt-4 lg:mt-5 lg:pt-5">
+    <footer className="relative z-40 mt-4 shrink-0 border-t border-white/10 bg-navy pt-4 sm:z-auto sm:bg-transparent lg:mt-5 lg:pt-5">
       <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between lg:gap-10">
         <p className="shrink-0 text-sm font-medium text-white/80 sm:text-base">
           Deze bedrijven werken al met ons samen:

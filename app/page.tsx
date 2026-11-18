@@ -17,7 +17,7 @@ const jsonLd = {
 
 export default function Home() {
   return (
-    <div className="mx-auto flex h-dvh w-full max-w-[1440px] flex-col overflow-x-clip px-5 py-4 sm:px-8 sm:py-5 lg:px-12 lg:py-6">
+    <div className="mx-auto flex h-dvh w-full max-w-[1440px] flex-col overflow-x-clip px-5 pt-4 pb-[max(1rem,env(safe-area-inset-bottom))] sm:px-8 sm:py-5 lg:px-12 lg:py-6">
       <a
         href="#inhoud"
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:rounded-md focus:bg-white focus:px-3 focus:py-2 focus:text-navy"
@@ -53,7 +53,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="min-h-0 max-sm:h-[17.5rem] max-sm:flex-none sm:flex-1 lg:h-full">
+          <div className="min-h-0 flex-1 max-sm:max-h-[17.5rem] max-sm:overflow-hidden lg:h-full">
             <PhotoCluster />
           </div>
         </div>
