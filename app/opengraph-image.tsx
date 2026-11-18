@@ -14,7 +14,7 @@ export default function OpenGraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "#1d2544",
+          background: "#2c2e61",
           padding: "72px",
           color: "white",
           fontFamily: "sans-serif",
@@ -28,7 +28,7 @@ export default function OpenGraphImage() {
             style={{
               fontSize: 68,
               fontWeight: 800,
-              color: "#64c887",
+              color: "#6ebd90",
               lineHeight: 1.05,
             }}
           >
@@ -49,8 +49,8 @@ export default function OpenGraphImage() {
         <div style={{ display: "flex", gap: 16 }}>
           <div
             style={{
-              background: "#4bb4e9",
-              color: "#1d2544",
+              background: "#029eda",
+              color: "#ffffff",
               borderRadius: 16,
               padding: "14px 22px",
               fontSize: 24,
@@ -61,8 +61,8 @@ export default function OpenGraphImage() {
           </div>
           <div
             style={{
-              background: "#64c887",
-              color: "#1d2544",
+              background: "#6ebd90",
+              color: "#ffffff",
               borderRadius: 16,
               padding: "14px 22px",
               fontSize: 24,

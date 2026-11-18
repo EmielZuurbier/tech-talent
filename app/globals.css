@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --navy: #1d2544;
-  --mint: #64c887;
-  --sky: #4bb4e9;
+  --navy: #2c2e61;
+  --mint: #6ebd90;
+  --sky: #029eda;
 }
 
 @theme inline {
   --color-navy: var(--navy);
   --color-mint: var(--mint);
   --color-sky: var(--sky);
-  --font-sans: var(--font-nunito), "Nunito Sans", ui-sans-serif, system-ui,
+  --font-sans: var(--font-rubik), "Rubik", ui-sans-serif, system-ui,
     sans-serif;
 }
 

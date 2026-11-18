@@ -44,10 +44,10 @@ export default function Home() {
       <main id="inhoud" className="mt-8 flex flex-1 flex-col lg:mt-10">
         <div className="grid flex-1 items-center gap-8 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:gap-x-8 lg:gap-y-6">
           <div className="max-w-xl lg:max-w-none">
-            <h1 className="text-4xl leading-[1.05] font-extrabold tracking-tight text-mint sm:text-5xl lg:text-[3.35rem]">
+            <h1 className="text-4xl leading-[1.08] font-light tracking-tight text-mint sm:text-5xl lg:text-[3.15rem]">
               Welkom bij Tech-talent
             </h1>
-            <p className="mt-5 max-w-lg text-lg leading-relaxed text-white sm:text-xl">
+            <p className="mt-5 max-w-lg text-lg leading-relaxed font-medium text-white sm:text-xl">
               {description}
             </p>
           </div>
@@ -60,10 +60,12 @@ export default function Home() {
             <Countdown />
             <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
               <CtaLink href={employerHref} tone="sky">
-                Zoek je talent? Registreer je hier voor een werkgeversticket.
+                Zoek je talent? Registreer je <span className="font-bold">hier</span>{" "}
+                voor een werkgeversticket.
               </CtaLink>
               <CtaLink href={candidateHref} tone="mint">
-                Sta je open voor een uitdaging? Klik hier. Je hebt vrij toegang.
+                Sta je open voor een uitdaging?{" "}
+                <span className="font-bold">Klik hier.</span> Je hebt vrij toegang.
               </CtaLink>
             </div>
           </div>
