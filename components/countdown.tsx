@@ -42,7 +42,7 @@ export function Countdown() {
 
   return (
     <section id="opening" aria-labelledby="opening-title" className="scroll-mt-8">
-      <h2 id="opening-title" className="text-sm font-bold tracking-[0.16em] text-mint uppercase">
+      <h2 id="opening-title" className="text-sm font-medium tracking-[0.16em] text-mint uppercase">
         {parts?.complete ? "Geopend" : "Livegang"}
       </h2>
       <p className="mt-1 text-sm text-white/75">
@@ -61,11 +61,11 @@ export function Countdown() {
             return (
               <li key={unit.key} className="min-w-[3.6rem]">
                 <span
-                  className={`block text-4xl font-extrabold tabular-nums tracking-tight sm:text-5xl ${parts ? "text-white" : "text-transparent"}`}
+                  className={`block text-4xl font-light tabular-nums tracking-tight sm:text-5xl ${parts ? "text-white" : "text-transparent"}`}
                 >
                   {pad(value)}
                 </span>
-                <span className="mt-1 block text-sm font-semibold text-mint">
+                <span className="mt-1 block text-sm font-medium text-mint">
                   {unitWord(value, unit.singular, unit.plural)}
                 </span>
               </li>
