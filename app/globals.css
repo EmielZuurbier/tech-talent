@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #1d2544;
+  --mint: #64c887;
+  --sky: #4bb4e9;
+}
+
+@theme inline {
+  --color-navy: var(--navy);
+  --color-mint: var(--mint);
+  --color-sky: var(--sky);
+  --font-sans: var(--font-nunito), "Nunito Sans", ui-sans-serif, system-ui,
+    sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--navy);
+  color: #fff;
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--mint);
+  color: var(--navy);
+}
+
+:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
