@@ -27,7 +27,7 @@ npm run build
 
 De code staat in `bothedevelopersagency/tech-talent`.
 
-1. Importeer die repository in Vercel (framework: Next.js, root: de repository zelf).
+1. Importeer die repository in Vercel. `vercel.json` zet het framework op Next.js. Dat is nodig omdat het project is aangemaakt toen de repository nog leeg was; zonder die instelling serveert Vercel alleen `public/` en geeft elke url een 404.
 2. Koppel het domein `tech-talent.nu` in het Vercel-project.
 3. Zet de DNS van het domein naar Vercel.
 4. Zet vóór 26 november 2026 de omgevingsvariabele `LAUNCH_REDIRECT_URL` op het adres van de server die daarna het platform draait, bijvoorbeeld `https://app.tech-talent.nu`.
