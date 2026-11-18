@@ -6,7 +6,7 @@ const rubik = Rubik({
   subsets: ["latin"],
   variable: "--font-rubik",
   display: "swap",
-  weight: ["300", "500", "700"],
+  weight: ["300", "500", "700", "900"],
 });
 
 const description =
@@ -40,7 +40,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="nl" className={`${rubik.variable} h-full antialiased`}>
-      <body className="min-h-full bg-navy font-sans text-white">{children}</body>
+      <body className={`${rubik.className} min-h-full bg-navy text-white`}>
+        {children}
+      </body>
     </html>
   );
 }

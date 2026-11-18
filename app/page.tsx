@@ -1,9 +1,7 @@
 import Link from "next/link";
 import { Countdown } from "@/components/countdown";
-import { CtaLink } from "@/components/cta-link";
 import { PartnerLogos } from "@/components/partner-logos";
 import { PhotoCluster } from "@/components/photo-cluster";
-import { candidateHref, employerHref } from "@/lib/links";
 
 const description =
   "Dé plek voor de Kop van Noord-Holland en omstreken waar uitdagende vacatures en ambitieuze tech-professionals elkaar treffen.";
@@ -19,7 +17,7 @@ const jsonLd = {
 
 export default function Home() {
   return (
-    <div className="mx-auto flex min-h-dvh w-full max-w-[1440px] flex-col overflow-x-clip px-5 py-6 sm:px-8 lg:px-12 lg:py-8">
+    <div className="mx-auto flex h-dvh w-full max-w-[1440px] flex-col overflow-x-clip px-5 py-4 sm:px-8 sm:py-5 lg:px-12 lg:py-6">
       <a
         href="#inhoud"
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:rounded-md focus:bg-white focus:px-3 focus:py-2 focus:text-navy"
@@ -27,7 +25,7 @@ export default function Home() {
         Naar de inhoud
       </a>
 
-      <header>
+      <header className="shrink-0">
         <Link href="/" className="inline-flex">
           {/* The wordmark is an SVG; the image optimizer does not process it. */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -36,38 +34,27 @@ export default function Home() {
             alt="Tech-talent.nu"
             width={3732}
             height={808}
-            className="h-12 w-auto sm:h-14 lg:h-16"
+            className="h-[1.375rem] w-auto min-[360px]:h-[1.546875rem] sm:h-[1.71875rem] lg:h-[2.40625rem]"
           />
         </Link>
       </header>
 
-      <main id="inhoud" className="mt-8 flex flex-1 flex-col lg:mt-10">
-        <div className="grid flex-1 items-center gap-8 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:gap-x-8 lg:gap-y-6">
-          <div className="max-w-xl lg:max-w-none">
-            <h1 className="text-4xl leading-[1.08] font-light tracking-tight text-mint sm:text-5xl lg:text-[3.15rem]">
-              Welkom bij Tech-talent
+      <main id="inhoud" className="mt-8 flex min-h-0 flex-1 flex-col sm:mt-5 lg:mt-6">
+        <div className="flex min-h-0 flex-1 flex-col gap-4 max-sm:justify-between lg:grid lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:grid-rows-[minmax(0,1fr)] lg:gap-x-10">
+          <div className="max-w-xl shrink-0 lg:max-w-none lg:self-center">
+            <h1 className="text-4xl leading-[1.08] font-bold tracking-tight text-mint sm:text-5xl lg:text-[3.15rem]">
+              Welkom bij <span className="whitespace-nowrap">Tech-talent</span>
             </h1>
-            <p className="mt-5 max-w-lg text-lg leading-relaxed font-medium text-white sm:text-xl">
+            <p className="mt-4 max-w-lg text-lg leading-relaxed font-medium text-white sm:text-xl lg:mt-5">
               {description}
             </p>
-          </div>
-
-          <div className="lg:col-start-2 lg:row-span-2 lg:row-start-1">
-            <PhotoCluster />
-          </div>
-
-          <div className="flex max-w-2xl flex-col gap-8">
-            <Countdown />
-            <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-              <CtaLink href={employerHref} tone="sky">
-                Zoek je talent? Registreer je <span className="font-bold">hier</span>{" "}
-                voor een werkgeversticket.
-              </CtaLink>
-              <CtaLink href={candidateHref} tone="mint">
-                Sta je open voor een uitdaging?{" "}
-                <span className="font-bold">Klik hier.</span> Je hebt vrij toegang.
-              </CtaLink>
+            <div className="mt-6 lg:mt-8">
+              <Countdown />
             </div>
+          </div>
+
+          <div className="min-h-0 max-sm:h-[17.5rem] max-sm:flex-none sm:flex-1 lg:h-full">
+            <PhotoCluster />
           </div>
         </div>
 

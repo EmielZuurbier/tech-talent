@@ -1,14 +1,11 @@
 import Image from "next/image";
+import { ConnectionLines } from "@/components/connection-lines";
+import { PhotoGrid } from "@/components/photo-grid";
 
 export function PhotoCluster() {
   return (
-    <div className="relative mx-auto h-[26rem] w-full max-w-[40rem] sm:h-[32rem] lg:h-[36rem] lg:max-w-none">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src="/grid.svg"
-        alt=""
-        className="pointer-events-none absolute top-0 right-0 z-0 h-[78%] w-[72%] max-w-none"
-      />
+    <div className="relative mx-auto h-full min-h-0 w-full max-w-[40rem] lg:max-w-none">
+      <PhotoGrid />
 
       <figure className="absolute top-[10%] right-[4%] z-10 h-[68%] w-[62%] overflow-hidden rounded-[1.75rem] border-[3px] border-white shadow-[0_18px_40px_rgba(0,0,0,0.22)]">
         <Image
@@ -34,12 +31,7 @@ export function PhotoCluster() {
         />
       </figure>
 
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src="/connections.svg"
-        alt=""
-        className="pointer-events-none absolute right-0 bottom-0 z-30 w-[70%] max-w-none"
-      />
+      <ConnectionLines />
     </div>
   );
 }

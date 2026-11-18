@@ -10,10 +10,10 @@ import {
 } from "@/lib/launch";
 
 const UNITS = [
-  { key: "days", singular: "dag", plural: "dagen" },
-  { key: "hours", singular: "uur", plural: "uren" },
-  { key: "minutes", singular: "minuut", plural: "minuten" },
-  { key: "seconds", singular: "seconde", plural: "seconden" },
+  { key: "days", singular: "dag", plural: "dagen", label: "Dagen" },
+  { key: "hours", singular: "uur", plural: "uren", label: "Uren" },
+  { key: "minutes", singular: "minuut", plural: "minuten", label: "Minuten" },
+  { key: "seconds", singular: "seconde", plural: "seconden", label: "Seconden" },
 ] as const;
 
 export function Countdown() {
@@ -41,32 +41,42 @@ export function Countdown() {
       : `Nog ${parts.days} ${unitWord(parts.days, "dag", "dagen")}, ${parts.hours} ${unitWord(parts.hours, "uur", "uren")} en ${parts.minutes} ${unitWord(parts.minutes, "minuut", "minuten")} tot ${LAUNCH_LABEL}, Nederlandse tijd.`;
 
   return (
-    <section id="opening" aria-labelledby="opening-title" className="scroll-mt-8">
-      <h2 id="opening-title" className="text-sm font-medium tracking-[0.16em] text-mint uppercase">
-        {parts?.complete ? "Geopend" : "Livegang"}
+    <section
+      id="opening"
+      aria-labelledby="opening-title"
+      className="w-fit max-w-full shrink-0 scroll-mt-8"
+    >
+      <h2
+        id="opening-title"
+        className="w-0 min-w-full bg-white px-1.5 py-1 text-center text-xl leading-none font-black tracking-tight whitespace-nowrap text-black uppercase sm:px-2 sm:py-1 sm:text-[1.55rem]"
+      >
+        {parts?.complete ? "Geopend" : "Lancering"}
       </h2>
-      <p className="mt-1 text-sm text-white/75">
-        <time dateTime="2026-11-26T09:00:00+01:00">{LAUNCH_LABEL}</time>
-        <span className="text-white/50"> · Nederlandse tijd</span>
-      </p>
 
       {parts?.complete ? (
-        <p className="mt-4 max-w-md text-2xl font-extrabold tracking-tight text-white">
+        <p className="mt-2 text-center text-sm font-medium text-white sm:text-base">
           Tech-talent.nu is geopend.
         </p>
       ) : (
-        <ol className="mt-4 flex gap-5 sm:gap-7" aria-hidden="true">
-          {UNITS.map((unit) => {
+        <ol className="mt-1.5 flex items-start justify-center" aria-hidden="true">
+          {UNITS.map((unit, index) => {
             const value = parts ? parts[unit.key] : 0;
             return (
-              <li key={unit.key} className="min-w-[3.6rem]">
-                <span
-                  className={`block text-4xl font-light tabular-nums tracking-tight sm:text-5xl ${parts ? "text-white" : "text-transparent"}`}
-                >
-                  {pad(value)}
-                </span>
-                <span className="mt-1 block text-sm font-medium text-mint">
-                  {unitWord(value, unit.singular, unit.plural)}
+              <li key={unit.key} className="flex items-start">
+                {index > 0 ? (
+                  <span className="px-1.5 text-xl leading-none font-black text-white sm:px-2.5 sm:text-2xl">
+                    :
+                  </span>
+                ) : null}
+                <span className="flex flex-col items-center">
+                  <span
+                    className={`text-xl leading-none font-black tabular-nums text-white sm:text-2xl ${parts ? "" : "text-transparent"}`}
+                  >
+                    {pad(value)}
+                  </span>
+                  <span className="mt-1 text-[0.58rem] leading-none text-white/55 sm:text-[0.62rem]">
+                    {unit.label}
+                  </span>
                 </span>
               </li>
             );
