@@ -1,10 +1,9 @@
 import Link from "next/link";
-import { Countdown } from "@/components/countdown";
 import { PartnerLogos } from "@/components/partner-logos";
 import { PhotoCluster } from "@/components/photo-cluster";
 
 const description =
-  "Dé plek voor de Kop van Noord-Holland en omstreken waar uitdagende vacatures en ambitieuze tech-professionals elkaar treffen.";
+  "Dé plek voor de Kop van Noord-Holland en omstreken waar ambitieuze tech-professionals zich presenteren voor uitdagende vacatures.";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -43,14 +42,11 @@ export default function Home() {
         <div className="flex min-h-0 flex-1 flex-col gap-4 max-sm:justify-between lg:grid lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:grid-rows-[minmax(0,1fr)] lg:gap-x-10">
           <div className="max-w-xl shrink-0 lg:max-w-none lg:self-center">
             <h1 className="text-4xl leading-[1.08] font-bold tracking-tight text-mint sm:text-5xl lg:text-[3.15rem]">
-              Welkom bij <span className="whitespace-nowrap">Tech-talent</span>
+              Welkom bij <span className="whitespace-nowrap">Tech-talent.nu</span>
             </h1>
             <p className="mt-4 max-w-lg text-lg leading-relaxed font-medium text-white sm:text-xl lg:mt-5">
               {description}
             </p>
-            <div className="mt-6 lg:mt-8">
-              <Countdown />
-            </div>
           </div>
 
           <div className="min-h-0 flex-1 max-sm:max-h-[17.5rem] max-sm:overflow-hidden lg:h-full">

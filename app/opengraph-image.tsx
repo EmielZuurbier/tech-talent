@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Welkom bij Tech-talent";
+export const alt = "Welkom bij Tech-talent.nu";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -32,18 +32,19 @@ export default function OpenGraphImage() {
               lineHeight: 1.05,
             }}
           >
-            Welkom bij Tech-talent
+            Welkom bij Tech-talent.nu
           </div>
           <div
             style={{
               marginTop: 24,
               fontSize: 30,
               lineHeight: 1.35,
-              maxWidth: 860,
+              maxWidth: 900,
             }}
           >
             Dé plek voor de Kop van Noord-Holland en omstreken waar
-            uitdagende vacatures en tech-professionals elkaar treffen.
+            ambitieuze tech-professionals zich presenteren voor uitdagende
+            vacatures.
           </div>
         </div>
         <div style={{ display: "flex", gap: 16 }}>

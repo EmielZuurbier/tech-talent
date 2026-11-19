@@ -10,7 +10,7 @@ const rubik = Rubik({
 });
 
 const description =
-  "Dé plek voor de Kop van Noord-Holland en omstreken waar uitdagende vacatures en ambitieuze tech-professionals elkaar treffen.";
+  "Dé plek voor de Kop van Noord-Holland en omstreken waar ambitieuze tech-professionals zich presenteren voor uitdagende vacatures.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://tech-talent.nu"),
@@ -26,12 +26,12 @@ export const metadata: Metadata = {
     locale: "nl_NL",
     url: "https://tech-talent.nu",
     siteName: "Tech-talent.nu",
-    title: "Welkom bij Tech-talent",
+    title: "Welkom bij Tech-talent.nu",
     description,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Welkom bij Tech-talent",
+    title: "Welkom bij Tech-talent.nu",
     description,
   },
   robots: { index: true, follow: true },
